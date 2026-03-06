@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل الخدمة - المعلم سالم ريحان</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+    --primary:#0f2d5c;
+    --orange:#ff7a00;
+    --bg:#f5f7fa;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo', sans-serif;}
+body{background:var(--bg);}
+nav{position:fixed;top:0;left:0;right:0;background:#fff;display:flex;justify-content:center;padding:15px;border-bottom:3px solid var(--orange);z-index:1000;}
+nav a{text-decoration:none;color:var(--primary);font-weight:bold;transition:0.3s;}
+nav a:hover{color:var(--orange);}
+.card-detail{max-width:800px;margin:120px auto 40px;background:#fff;padding:30px;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.15);text-align:center;}
+.card-detail img{width:100%;border-radius:15px;margin-bottom:20px;}
+.card-detail i{font-size:50px;color:var(--orange);margin-bottom:15px;display:block;}
+.card-detail h2{color:var(--primary);font-size:28px;margin-bottom:20px;}
+.card-detail p{font-size:18px;line-height:1.8;color:#0b1d3d;margin-bottom:30px;}
+.card-detail button{padding:12px 30px;border:none;background:var(--orange);color:white;font-size:18px;border-radius:10px;cursor:pointer;transition:0.3s;}
+.card-detail button:hover{background:#ff9a33;}
+@media (max-width:768px){
+    .card-detail{margin:120px 15px 40px;padding:25px;}
+    .card-detail h2{font-size:24px;}
+    .card-detail p{font-size:16px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">الرئيسية</a>
+</nav>
+
+<div class="card-detail" id="card-detail">
+    <!-- المحتوى سيتم إدخاله عبر جافاسكريبت -->
+</div>
+
+<script>
+// تعريف محتوى كل خدمة مع صورة
+const servicesContent = {
+    build:{
+        img:'https://images.unsplash.com/photo-1581090462721-7e2b9bffeb41?auto=format&fit=crop&w=1000&q=80',
+        icon:'fa-building',
+        title:'أعمال الطوب والبناء',
+        text:`تنفيذ أعمال البناء بدقة وجودة عالية يشمل صب الأساسات وبناء الجدران والاهتمام بأدق التفاصيل.
+نستخدم أفضل المواد لضمان المتانة.
+يتم التخطيط لكل مشروع بعناية لتفادي الأخطاء.
+نضمن الالتزام بالمواعيد النهائية والتواصل المستمر مع العميل.
+نقدم نصائح حول التصميم لتناسب احتياجات العميل.
+نركز على التفاصيل الجمالية والمظهر الخارجي للمبنى.
+كل مشروع يتم تفقده بدقة بعد التنفيذ لضمان الجودة.
+السعر يحدد بعد المعاينة حسب مساحة العمل.`
+    },
+    repair:{
+        img:'https://images.unsplash.com/photo-1616627989654-bc7d6a8881b4?auto=format&fit=crop&w=1000&q=80',
+        icon:'fa-tools',
+        title:'ترميم وترقية الديار',
+        text:`نعيد تأهيل المنازل القديمة وتحسين مظهرها الداخلي والخارجي باستخدام أفضل المواد.
+يشمل العمل إصلاح التشققات والجدران والأسقف.
+نقوم بتحديث الديكور والألوان لتتناسب مع العصر الحديث.
+نركز على الجودة والمتانة لضمان بقاء العمل طويل الأمد.
+نراجع كل التفاصيل لضمان النتيجة المثالية.
+نضمن الالتزام بالمواعيد المتفق عليها مع العميل.
+السعر يحدد حسب حالة المنزل ومتطلباته الخاصة.`
+    },
+    floor:{
+        img:'https://images.unsplash.com/photo-1591012911207-433d03e2f18f?auto=format&fit=crop&w=1000&q=80',
+        icon:'fa-layer-group',
+        title:'صبة الحوش والأرضيات',
+        text:`نقوم بصب الحوش والأرضيات بدقة عالية لضمان السطح المتين والمستوي.
+نستخدم مواد مقاومة للعوامل الجوية.
+العمل يشمل التشطيبات النهائية لضمان مظهر جمالي.
+نلتزم بمعايير السلامة في جميع خطوات التنفيذ.
+يمكن تصميم الأرضيات حسب رغبة العميل.
+نقوم بفحص كل مساحة بعد الصب للتأكد من جودة العمل.
+العمل يتم بسرعة وكفاءة مع الحفاظ على الجودة.
+السعر يحدد حسب مساحة الأرضية ونوع المواد المستخدمة.`
+    },
+    plumbing:{
+        img:'https://images.unsplash.com/photo-1581091012184-5fc44b5b0e8f?auto=format&fit=crop&w=1000&q=80',
+        icon:'fa-water',
+        title:'الرشوش والسباكة',
+        text:`تنفيذ تمديدات المياه والسباكة بدقة واحترافية لضمان عدم التسريب.
+نستخدم مواد عالية الجودة لضمان المتانة.
+نقوم بتخطيط شامل قبل بدء العمل لتجنب المشاكل المستقبلية.
+نقدم حلول مبتكرة للتعامل مع أعطال الأنابيب.
+نركز على التفاصيل الصغيرة لضمان الكفاءة.
+العمل يتم بسرعة وبدون إزعاج للعميل.
+نضمن الالتزام بالمواعيد المحددة.
+السعر يحدد حسب حجم وتعقيد العمل المطلوب.`
+    },
+    road:{
+        img:'https://images.unsplash.com/photo-1568972944946-bdbcb13aa0b1?auto=format&fit=crop&w=1000&q=80',
+        icon:'fa-road',
+        title:'أعمال الطرق والخرسانة',
+        text:`تنفيذ ممرات وصبات خرسانية بدقة هندسية عالية.
+نركز على التسوية والتخطيط لضمان نتائج ممتازة.
+نستخدم مواد خرسانية عالية الجودة لضمان المتانة.
+العمل يشمل التشطيبات النهائية للطرق والممرات.
+نتأكد من صيانة السطح ضد التشققات والعوامل الجوية.
+ننفذ المشاريع مع الالتزام بالمواعيد المحددة.
+العمل يتم بطريقة آمنة وفعالة.
+السعر يحدد حسب حجم المشروع ومتطلباته.`
+    }
+};
+
+// قراءة الـ query string
+const params = new URLSearchParams(window.location.search);
+const serviceId = params.get('service') || 'build'; // افتراضي أول خدمة
+
+const cardDiv = document.getElementById('card-detail');
+if(servicesContent[serviceId]){
+    const s = servicesContent[serviceId];
+    cardDiv.innerHTML = `
+        <img src="${s.img}" alt="${s.title}">
+        <i class="fas ${s.icon}"></i>
+        <h2>${s.title}</h2>
+        <p>${s.text.replace(/\n/g,'<br>')}</p>
+        <button onclick="window.location.href='index.html'">العودة إلى الصفحة الرئيسية</button>
+    `;
+} else {
+    cardDiv.innerHTML = `<p>الخدمة غير موجودة. <a href="index.html">العودة للصفحة الرئيسية</a></p>`;
+}
+</script>
+
+</body>
+</html>
